@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/khaki">
+
+    <TextView
+        android:id="@+id/tv_activity"
+        android:hint="我显示从fragment传过来的参数"
+        style="@style/FontStyle"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_activity"
+        style="@style/FontStyle"
+        android:text="开始给fragment1传值"
+        android:layout_marginTop="5dp"
+        android:onClick="sendMessage"/>
+
+    <EditText
+        android:id="@+id/edit_activity"
+        style="@style/FontStyle"
+        android:hint="请输入想要传给fragment的值"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/gray"/>
+    <!--定义两个fragment容器-->
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="480dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <LinearLayout
+            android:id="@+id/ll_fragment1_container"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fragment2_container"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/LayoutAttr_wrap_content2"
+        android:text="作者:hufan"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:padding="16dp"/>
+
+</LinearLayout>

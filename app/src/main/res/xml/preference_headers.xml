@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--启动指定Preference的列表项-->
+    <header android:fragment="com.master.fragmentactivitycommunication.PreferenceActivityTest$Prefers1Fragment"
+        android:icon="@drawable/ic_share"
+        android:title="程序选项设置"
+        android:summary="设置应用的相关选项"/>
+
+    <header android:fragment="com.master.fragmentactivitycommunication.PreferenceActivityTest$Prefers2Fragment"
+        android:icon="@drawable/ic_manage_up"
+        android:title="界面选项设置"
+        android:summary="设置显示界面的相关选项">
+        <extra
+            android:name="website"
+            android:value="www.hufan.org"/>
+    </header>
+
+    <header
+        android:icon="@drawable/ic_me_up"
+        android:title="使用Intent"
+        android:summary="使用Intent启动某个Activity">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="http://jwc.xauat.edu.cn/"/>
+    </header>
+</preference-headers>

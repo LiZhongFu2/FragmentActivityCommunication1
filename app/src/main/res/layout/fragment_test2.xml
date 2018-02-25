@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/tan">
+    <TextView
+        android:id="@+id/tv_fragment2"
+        android:hint="我还可以间接显示Activity的值"
+        style="@style/FontStyle"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_frag22act"
+        style="@style/FontStyle"
+        android:text="开始给activity传值"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/btn_frag22frag1"
+        style="@style/FontStyle"
+        android:text="开始给fragment1传值"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/edit_fragment2"
+        style="@style/FontStyle"
+        android:hint="请输入要传递的字符串"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/gray"/>
+
+
+
+</LinearLayout>

@@ -50,17 +50,18 @@ public class FragmentTest1 extends Fragment {
             public void onClick(View v) {
                 String text=edit_fragment1.getText().toString().trim();//获得内容
 
+                /**
                  //方式1：可以调用findFragmentById()方法根据id获得fragment的对象，调用fragment中的方法赋值
                  FragmentTest2 fragmentTest2=(FragmentTest2)getFragmentManager()
                  .findFragmentById(R.id.ll_fragment2_container);//获得fragment的具体对象
                  fragmentTest2.ReceiveFragmentMessage(text);
+                 */
 
-                /**
                  //方式2：获得fragmentmanager对象然后获得右侧fragment,再调用getView获得右侧fragment的View对象，最后调用view的findviewById获得赋值的控制
                  TextView tv=getFragmentManager().findFragmentById(R.id.ll_fragment2_container)
                  .getView().findViewById(R.id.tv_fragment2);
                  tv.setText(text);
-                 */
+
 
                 /**
                  //方式3：先调用getActivity()获得所属的Activity的对象，然后调用findviewbyid（）获取目标控件

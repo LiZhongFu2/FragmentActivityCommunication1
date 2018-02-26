@@ -23,6 +23,9 @@
             android:label="设置程序参数"/>
         <activity android:name=".activity2fragment.ActivityTest"/>
         <activity android:name=".sdkfragment.ActivityTest"/>
+        <activity android:name=".activity2activity.FirstActivity"/>
+        <activity android:name=".activity2activity.SecondActivity"/>
+        <activity android:name=".activity2activity.ThirdActivity"/>
     </application>
 
 </manifest>

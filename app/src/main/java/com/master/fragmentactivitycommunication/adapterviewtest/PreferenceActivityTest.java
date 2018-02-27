@@ -1,4 +1,4 @@
-package com.master.fragmentactivitycommunication;
+package com.master.fragmentactivitycommunication.adapterviewtest;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -6,6 +6,8 @@ import android.preference.PreferenceFragment;
 import android.support.annotation.Nullable;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.master.fragmentactivitycommunication.R;
 
 import java.util.List;
 

@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 
 import com.master.fragmentactivitycommunication.activity2activity.FirstActivity;
 import com.master.fragmentactivitycommunication.activity2fragment.ActivityTest;
+import com.master.fragmentactivitycommunication.adapterviewtest.ExpandableListActivityTest;
+import com.master.fragmentactivitycommunication.adapterviewtest.PreferenceActivityTest;
 
 /**
  * Created by hufan on 2018/2/9.

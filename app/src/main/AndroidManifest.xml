@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ExpandableListActivityTest"
+        <activity android:name=".adapterviewtest.ExpandableListActivityTest"
             android:label="查看星际兵种"/>
-        <activity android:name=".PreferenceActivityTest"
+        <activity android:name=".adapterviewtest.PreferenceActivityTest"
             android:label="设置程序参数"/>
         <activity android:name=".activity2fragment.ActivityTest"/>
         <activity android:name=".sdkfragment.ActivityTest"/>

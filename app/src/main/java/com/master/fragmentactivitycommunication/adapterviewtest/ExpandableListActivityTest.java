@@ -1,4 +1,4 @@
-package com.master.fragmentactivitycommunication;
+package com.master.fragmentactivitycommunication.adapterviewtest;
 
 import android.app.ExpandableListActivity;
 import android.content.Context;
@@ -13,6 +13,8 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.master.fragmentactivitycommunication.R;
 
 /**
  * Created by hufan on 2018/2/10.

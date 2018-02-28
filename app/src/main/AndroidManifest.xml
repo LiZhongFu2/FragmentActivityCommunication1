@@ -29,6 +29,7 @@
         <activity android:name=".adapterviewtest.SpinnerTest"/>
         <activity android:name=".adapterviewtest.AdapterViewFlipperTest"/>
         <activity android:name=".adapterviewtest.StackViewTest"/>
+        <activity android:name=".viewanimatortest.ViewSwitcherTest"/>
     </application>
 
 </manifest>

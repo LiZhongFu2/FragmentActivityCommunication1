@@ -11,6 +11,7 @@ import com.master.fragmentactivitycommunication.adapterviewtest.AdapterViewFlipp
 import com.master.fragmentactivitycommunication.adapterviewtest.ExpandableListActivityTest;
 import com.master.fragmentactivitycommunication.adapterviewtest.PreferenceActivityTest;
 import com.master.fragmentactivitycommunication.adapterviewtest.SpinnerTest;
+import com.master.fragmentactivitycommunication.adapterviewtest.StackViewTest;
 
 /**
  * Created by hufan on 2018/2/9.
@@ -22,11 +23,11 @@ public class MainActivity extends LauncherActivity {
     // TODO: 2018/2/10 定义Activity的名称
     private String[] names={"PreferenceActivityTest","ExpandableListActivityTest",
             "测试Activity和Fragment之间的传值","sdkFragmentTest","Activity之间传值测试","SpinnerTest"
-            ,"AdapterViewFlipperTest"};
+            ,"AdapterViewFlipperTest","StackViewTest"};
     // TODO: 2018/2/10 定义Activity对应的实现类
     Class<?>[] aClass={PreferenceActivityTest.class,ExpandableListActivityTest.class, ActivityTest.class,
             com.master.fragmentactivitycommunication.sdkfragment.ActivityTest.class,
-            FirstActivity.class, SpinnerTest.class, AdapterViewFlipperTest.class};
+            FirstActivity.class, SpinnerTest.class, AdapterViewFlipperTest.class, StackViewTest.class};
 
     // TODO: 2018/2/10 设置该窗口显示的列表所需的Adapter
 

@@ -27,6 +27,7 @@
         <activity android:name=".activity2activity.SecondActivity"/>
         <activity android:name=".activity2activity.ThirdActivity"/>
         <activity android:name=".adapterviewtest.SpinnerTest"/>
+        <activity android:name=".adapterviewtest.AdapterViewFlipperTest"/>
     </application>
 
 </manifest>

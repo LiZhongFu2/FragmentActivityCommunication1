@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 
 import com.master.fragmentactivitycommunication.activity2activity.FirstActivity;
 import com.master.fragmentactivitycommunication.activity2fragment.ActivityTest;
+import com.master.fragmentactivitycommunication.adapterviewtest.AdapterViewFlipperTest;
 import com.master.fragmentactivitycommunication.adapterviewtest.ExpandableListActivityTest;
 import com.master.fragmentactivitycommunication.adapterviewtest.PreferenceActivityTest;
 import com.master.fragmentactivitycommunication.adapterviewtest.SpinnerTest;
@@ -20,11 +21,12 @@ public class MainActivity extends LauncherActivity {
 
     // TODO: 2018/2/10 定义Activity的名称
     private String[] names={"PreferenceActivityTest","ExpandableListActivityTest",
-            "测试Activity和Fragment之间的传值","sdkFragmentTest","Activity之间传值测试","SpinnerTest"};
+            "测试Activity和Fragment之间的传值","sdkFragmentTest","Activity之间传值测试","SpinnerTest"
+            ,"AdapterViewFlipperTest"};
     // TODO: 2018/2/10 定义Activity对应的实现类
     Class<?>[] aClass={PreferenceActivityTest.class,ExpandableListActivityTest.class, ActivityTest.class,
             com.master.fragmentactivitycommunication.sdkfragment.ActivityTest.class,
-            FirstActivity.class, SpinnerTest.class};
+            FirstActivity.class, SpinnerTest.class, AdapterViewFlipperTest.class};
 
     // TODO: 2018/2/10 设置该窗口显示的列表所需的Adapter
 

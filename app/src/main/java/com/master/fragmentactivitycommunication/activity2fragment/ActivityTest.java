@@ -67,6 +67,8 @@ public class ActivityTest extends Activity implements FragmentTest2.MyListener{
         fragmentManager=getFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.ll_fragment1_container,frag1);//更换现在改变的Fragment(replace而不是add)
+        //将事物添加到Back栈，允许用户按Back按键返回到替换Fragment前的状态
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }

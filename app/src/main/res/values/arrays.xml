@@ -19,4 +19,10 @@
         <item>10</item>
         <item>2</item>
     </string-array>
+
+    <string-array name="books">
+        <item>疯狂Java讲义</item>
+        <item>疯狂Ajax讲义</item>
+        <item>疯狂XML讲义</item>
+    </string-array>
 </resources>

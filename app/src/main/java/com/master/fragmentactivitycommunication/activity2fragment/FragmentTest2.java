@@ -28,6 +28,10 @@ public class FragmentTest2 extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //如果Activity没有实现Listener接口，抛出异常
+        if(!(getActivity() instanceof MyListener)){
+            throw new IllegalStateException("FragmentTest2所在的activity必须实现该接口");
+        }
         //创建listener具体对象，运用到多态的知识
         listener=(MyListener)getActivity();
     }

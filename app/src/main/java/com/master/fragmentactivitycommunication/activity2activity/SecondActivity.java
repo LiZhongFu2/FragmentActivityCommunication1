@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -33,6 +34,7 @@ public class SecondActivity extends Activity{
     private int cityImage[]={R.drawable.ic_logo_wankeboyu,R.drawable.ic_logo_wankeboyu,R.drawable.ic_logo_wankeboyu,
             R.drawable.ic_logo_wankeboyu,R.drawable.ic_logo_wankeboyu,R.drawable.ic_logo_wankeboyu,
             R.drawable.ic_logo_wankeboyu,R.drawable.ic_logo_wankeboyu};
+    private final static String TAG="SecondActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class SecondActivity extends Activity{
         setContentView(R.layout.activity_second);
         initListView();
         handleListItems();
+        Log.i(TAG, "onCreate: 1");
 
     }
 
@@ -81,8 +84,42 @@ public class SecondActivity extends Activity{
         R.id.tv_simple_adapter_item_cityInfo,R.id.image_simple_adapter_item});//最后的两个参数由对应的关系
         listCity=findViewById(R.id.list_activity_second_city);
         listCity.setAdapter(simpleAdapter);
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i(TAG, "onStart: 2");
+    }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i(TAG, "onRestart: 6");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG, "onResume: 3");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "onDestroy: 7");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG, "onPause: 4");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG, "onStop: 5");
     }
 
 }

@@ -5,10 +5,12 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.master.fragmentactivitycommunication.R;
 
@@ -26,12 +28,14 @@ public class FirstActivity extends Activity{
     private EditText userName,password,city;
     private Button commit,choseCity;
     private RadioButton male;
+    private final static String TAG="FirstActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         findView();
+        Log.i(TAG, "onCreate: 1");
     }
 
     /**
@@ -91,5 +95,41 @@ public class FirstActivity extends Activity{
         commit=findViewById(R.id.btn_activity_first_commit);
         choseCity=findViewById(R.id.btn_activity_first_chosecity);
         male=findViewById(R.id.radio_activity_first_male);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i(TAG, "onStart: 2");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i(TAG, "onRestart: 6");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG, "onResume: 3");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG, "onDestroy: 7");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(TAG, "onPause: 4");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG, "onStop: 5");
     }
 }

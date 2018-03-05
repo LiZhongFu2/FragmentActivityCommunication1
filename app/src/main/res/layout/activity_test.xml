@@ -52,6 +52,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_activity_test_count"
         style="@style/LayoutAttr_wrap_content2"
         android:text="作者:hufan"
         android:layout_weight="1"

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -20,11 +21,12 @@ import com.master.fragmentactivitycommunication.R;
 
 public class ActivityTest extends Activity implements FragmentTest2.MyListener{
 
-    private TextView tv_activity;
+    private TextView tv_activity,tv_count;
     private Button btn_activity;
     private EditText edit_activity;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class ActivityTest extends Activity implements FragmentTest2.MyListener{
         tv_activity=findViewById(R.id.tv_activity);
         btn_activity=findViewById(R.id.btn_activity);
         edit_activity=findViewById(R.id.edit_activity);
+        tv_count=findViewById(R.id.tv_activity_test_count);
 
         fragmentManager=getFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
@@ -42,6 +45,19 @@ public class ActivityTest extends Activity implements FragmentTest2.MyListener{
         fragmentTransaction.commit();
 
         initView();
+        getCount();
+    }
+
+    /**
+     * 显示程序启动的次数
+     */
+    public void getCount() {
+        sharedPreferences=getSharedPreferences("count",MODE_PRIVATE);
+        int count=sharedPreferences.getInt("count",0);
+        tv_count.setText("程序自运行到现在已经运行："+count+" 次");
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putInt("count",++count);//放入键值对
+        editor.commit();
     }
 
     /**

@@ -3,13 +3,16 @@ package com.master.fragmentactivitycommunication.activity2activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.master.fragmentactivitycommunication.R;
 
@@ -122,4 +125,19 @@ public class SecondActivity extends Activity{
         Log.i(TAG, "onStop: 5");
     }
 
+    /**
+     * 按返回键时，FirstActivity崩溃，故通过捕获异常对其进行处理
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    // TODO: 2018/3/3 未解决
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK&&event.getRepeatCount() == 0){
+            SecondActivity.this.finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

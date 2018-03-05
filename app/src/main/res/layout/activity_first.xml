@@ -56,8 +56,7 @@
         android:id="@+id/btn_activity_first_commit"
         style="@style/FontStyle"
         android:layout_marginTop="4dp"
-        android:text="确认提交
-(信息将传给activity2)"
+        android:text="确认将信息传给activity2（使用File存储）"
         android:onClick="onClick"/>
 
     <!--只要放在同一个TableLayout布局下，每个单元格的大小按照最大的尺寸进行计算-->

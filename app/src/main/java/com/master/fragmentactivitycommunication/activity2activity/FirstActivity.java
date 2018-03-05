@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.Script;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,10 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.master.fragmentactivitycommunication.R;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
 /**
  * Created by hufan on 2018/2/25.
@@ -29,6 +34,8 @@ public class FirstActivity extends Activity{
     private Button commit,choseCity;
     private RadioButton male;
     private final static String TAG="FirstActivity";
+    private String gender;
+    final String FILE_NAME="firstActivity.bin";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +49,7 @@ public class FirstActivity extends Activity{
      * 根据用户输入对Person对象进行初始化
      */
     private void initPersonData() {
-        String gender=male.isChecked() ? "男" :"女";
+        gender=male.isChecked() ? "男" :"女";
         //实例化persson对象（可序列化）
         Person p=new Person(userName.getText().toString(),password.getText().toString(),gender);
         // TODO: 2018/2/26 创建Budle对象
@@ -62,11 +69,41 @@ public class FirstActivity extends Activity{
         switch (view.getId()){
             case R.id.btn_activity_first_commit://启动第二个活动，并传送用户数据
                 initPersonData();
+                storageUserInfo();
                 break;
             case R.id.btn_activity_first_chosecity://启动第二个活动，选择城市信息
                 Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
                 startActivityForResult(intent,0);
                 break;
+        }
+    }
+
+    /**
+     *利用文件流存储用户信息
+     */
+    private void storageUserInfo() {
+        System.out.println(new StringBuilder("a").append("b").append("c").toString());
+        //将输入内容写入文件中
+        write(userName.getText().toString());
+        write(password.getText().toString());
+        write(gender);
+    }
+
+    /**
+     * 文件流写入
+     * @param s
+     */
+    private void write(String s) {
+        try {
+            //以追加的方式打开文件输出流
+            FileOutputStream fos=openFileOutput(FILE_NAME,MODE_APPEND);
+            //将fos包装成PrintStream流
+            PrintStream ps=new PrintStream(fos);
+            //输出文件内容
+            ps.println(s);
+            ps.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 

@@ -31,5 +31,19 @@
         android:text="用户姓名"
         android:layout_marginTop="4dp"/>
 
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_activity_show_last_userInfo"
+            style="@style/FontStyle"
+            android:layout_gravity="center_horizontal"
+            android:text=""/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
